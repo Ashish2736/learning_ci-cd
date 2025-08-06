@@ -6,11 +6,7 @@
     "recoil": "^0.7.7"
   },
   "exports": {
-<<<<<<< HEAD
     "./balance": "./src/hooks/useBalance.ts"
-=======
-    "./balance": "./src/atoms/balance.ts",
-    "./useBalance":"./src/hooks/useBalance.ts"
->>>>>>> de111df (Add dockerfile)
+
   }
 }
