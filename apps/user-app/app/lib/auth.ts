@@ -1,8 +1,9 @@
 import db from "@repo/db/client";
 import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcrypt";
+import { AuthOptions, User } from "next-auth";
 
-export const authOptions = {
+export const authOptions: AuthOptions = {
     providers: [
       CredentialsProvider({
           name: 'Credentials',
@@ -25,9 +26,9 @@ export const authOptions = {
                 if (passwordValidation) {
                     return {
                         id: existingUser.id.toString(),
-                        name: existingUser.name,
-                        email: existingUser.number
-                    }
+                        name: existingUser.name ?? "User",
+                        email: String(existingUser.number || ""),
+                    } satisfies User
                 }
                 return null;
             }

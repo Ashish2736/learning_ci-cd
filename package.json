@@ -6,8 +6,15 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+<<<<<<< HEAD
     "db:generate": "cd packages/db && npx prisma generate && cd ../..",
     "start-user-app": "cd ./apps/user-app && npm run start"
+=======
+    "db:generate":"cd packages/db && npx prisma generate && cd ../..",
+    "start-user-app":"cd ./apps/user-app && npx next start"
+
+
+>>>>>>> de111df (Add dockerfile)
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
